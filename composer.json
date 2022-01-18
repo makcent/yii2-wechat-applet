@@ -1,0 +1,27 @@
+{
+    "name": "makcent/yii-wechat-applet",
+    "type":"yii2-extension",
+    "description":"The wechat applet extension for the Yii framework",
+    "keyword":["yii2","wechat","extension", "applet"],
+    "license":"MIT",
+    "support":{
+        "issues":"https://github.com/makcent/yii-wechat-applet/issues",
+        "forum":"https://github.com/makcent",
+        "source":"https://github.com/makcent/yii-wechat-applet"
+    },
+    "authors":[
+        {
+            "name":"Fu Ming",
+            "email":"fuming@makcent.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require":{
+        "yiisoft/yii2":"*"
+    },
+    "autoload": {
+        "psr-4": {
+            "makcent\\wechat\\applet\\": "src/"
+        }
+    }
+}
