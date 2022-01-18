@@ -26,7 +26,7 @@ class Instance extends Component
      */
     public function getAccessToken()
     {
-        return $this->send('cgi-bin/token',[
+        return $this->request('cgi-bin/token',[
             'grant_type' => 'client_credential',
             'appid'      => $this->appid,
             'secret'     => $this->secret
@@ -41,7 +41,7 @@ class Instance extends Component
      * @param boolean $encode
      * @return array
      */
-    protected function send(string $url, array $query = [], array $params = [], boolean $encode = false) : array
+    protected function request(string $url, array $query = [], array $params = [], boolean $encode = false) : array
     {
         return RequestHelper::curl(
             static::getRequestPathByName($url,$query),
