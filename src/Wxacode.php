@@ -12,7 +12,7 @@ class Wxacode extends Instance
      */
     public function getUnlimited(string $access_token, array $params) : array
     {
-        return $this->send('wxa/getwxacodeunlimit',['access_token' => $access_token], $params,true);
+        return $this->request('wxa/getwxacodeunlimit',['access_token' => $access_token], json_encode($params,JSON_UNESCAPED_UNICODE));
     }
 
     /**
@@ -23,7 +23,7 @@ class Wxacode extends Instance
      */
     public function get(string $access_token, array $params) : array
     {
-        return $this->send('wxa/getwxacode',['access_token' => $access_token],$params,true);
+        return $this->request('wxa/getwxacode',['access_token' => $access_token],json_encode($params,JSON_UNESCAPED_UNICODE));
     }
 
     /**
@@ -34,6 +34,6 @@ class Wxacode extends Instance
      */
     public function createQRCode(string $access_token, array $params) : array
     {
-        return $this->send('cgi-bin/wxaapp/createwxaqrcode',['access_token' => $access_token],$params,true);
+        return $this->request('cgi-bin/wxaapp/createwxaqrcode',['access_token' => $access_token],json_encode($params,JSON_UNESCAPED_UNICODE));
     }
 }

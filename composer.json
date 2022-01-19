@@ -1,5 +1,5 @@
 {
-    "name": "makcent/yii-wechat-applet",
+    "name": "makcent/yii2-wechat-applet",
     "type":"yii2-extension",
     "description":"The wechat applet extension for the Yii framework",
     "keyword":["yii2","wechat","extension", "applet"],
