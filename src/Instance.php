@@ -21,6 +21,21 @@ class Instance extends Component
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * 获取access_token
+     * @return array
+     */
+    public function getAccessToken()
+    {
+        return $this->request('cgi-bin/token',[
+            'grant_type' => 'client_credential',
+            'appid'      => $this->appid,
+            'secret'     => $this->secret
+        ]);
+    }
+
+    /**
      * 发送请求
      * @param string $url
      * @param array $query
